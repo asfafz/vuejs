@@ -8,7 +8,7 @@
 </head>
 <body>
  <div id="app">
-<H2>{{project}}</H2>
+<H2 v-cloak>{{project + ' is project name' + developer}}</H2>
 </div>   
 
 </body>
@@ -16,14 +16,3 @@
 
 <script src="https://unpkg.com/vue"></script>
 <script src="main.js"></script>
-<script>
- var vuevar = new Vue({
-
-    el:'#app',
-    data: {
-        project : this.project
-    }
-    
-});
-
-</script>

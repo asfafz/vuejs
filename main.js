@@ -1,7 +1,12 @@
 
 
 
-var project ="vue js project";
+ var app = new Vue({
 
-
-
+    el:'#app',
+    data: {
+        project : this.project,
+        developer : " khan"
+    }
+    
+});
