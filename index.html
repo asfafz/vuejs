@@ -1,0 +1,29 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VUE JS PAGE</title>
+</head>
+<body>
+ <div id="app">
+<H2>{{project}}</H2>
+</div>   
+
+</body>
+</html>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="main.js"></script>
+<script>
+ var vuevar = new Vue({
+
+    el:'#app',
+    data: {
+        project : this.project
+    }
+    
+});
+
+</script>
