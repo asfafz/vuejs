@@ -5,8 +5,10 @@
 
     el:'#app',
     data: {
-        project : this.project,
-        developer : " khan"
+        project : "socks",
+        description : "product description",
+        image: "assets/socks.png",
+        image1: "assets/blue_socks.png"
     }
     
 });

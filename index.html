@@ -8,7 +8,14 @@
 </head>
 <body>
  <div id="app">
-<H2 v-cloak>{{project + ' is project name' + developer}}</H2>
+<H2 v-cloak>{{project}}</H2>
+<h3>{{description}}</h3>
+<div class="product_image">
+<img :src="image" alt="" width="20%" height="20%"><br>
+<img :src="image1" alt="" width="20%" height="20%">
+</div>
+
+
 </div>   
 
 </body>
