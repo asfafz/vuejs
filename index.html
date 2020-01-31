@@ -8,14 +8,22 @@
 </head>
 <body>
  <div id="app">
-<H2 v-cloak>{{project}}</H2>
-<h3>{{description}}</h3>
-<div class="product_image">
-<img :src="image" alt="" width="20%" height="20%"><br>
-<img :src="image1" alt="" width="20%" height="20%">
-</div>
+    <H2 v-cloak>{{project}}</H2>
+    <h3>{{description}}</h3>
+    <div class="product_image">
+        <img :src="image" alt="" width="20%" height="20%"><br>
+    </div>
+    <p v-show="inStock">Available</p>
 
+    <p v-if="numval>3" style="background-color: green;">Available</p>
+    <p v-else style="background-color: red;">not available</p>
 
+    <ul v-for="detail in details">
+        <li>{{detail}}</li>
+    </ul>
+    <ul v-for="vr in variants">
+        <li>{{vr.id +' - '+ vr.color}}</li>
+    </ul>
 </div>   
 
 </body>
@@ -23,3 +31,7 @@
 
 <script src="https://unpkg.com/vue"></script>
 <script src="main.js"></script>
+
+
+
+
