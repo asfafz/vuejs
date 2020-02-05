@@ -5,15 +5,29 @@
 
     el:'#app',
     data: {
-        project : "socks",
-        description : "product description",
-        image: "assets/socks.png",
-        image1: "assets/blue_socks.png",
-        inStock: true,
-        numval : 5,
-        details : ["80% Cottons","20 Polyester","Gender Neutral"],
-        variants :[{id:01,color:"red"},{id:02,color:"blue"},{id:03,color:"green"},{id:04,color:"yellow"}]
 
+        product: "Socks",
+        image: "assets/green_socks.png",
+        inStock: true,
+        details : ["80% Cottons","20 Polyester","Gender-neutral"],
+        variants :[
+            {variantId:2234,variantColor:"Blue",variantImage:"assets/blue_socks.png"},
+            {variantId:2238,variantColor:"Green",variantImage:"assets/green_socks.png"},
+                  ],
+        cart:0
+
+    },
+
+    methods:{
+
+        addToCart()
+        {
+            this.cart +=1;
+        },
+        updateProduct(varianImage)
+        {
+            this.image = varianImage
+        }
     }
     
 });
@@ -21,12 +35,18 @@
 
 
 /*
-
 conditions
 ---------------
 v-if
 v-else-if
 v-else
 v-show
+
+
+
+ for onclick we use 
+ v-on:click ="fun"
+ or
+ :click="call function or perform operation"
 
 */
